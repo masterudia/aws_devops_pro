@@ -3,11 +3,12 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Build started on `date`"
+      - echo "Build started on $(date)"
       - mkdir dist
-      - cp index.html dist/
+      - cp assets/index.html dist/
 
 artifacts:
   files:
     - dist/**/*
   base-directory: dist
+  name: site.zip
