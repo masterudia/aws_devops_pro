@@ -8,7 +8,9 @@ phases:
       - cp assets/index.html dist/
 
 artifacts:
-  files:
-    - dist/**/*
   base-directory: dist
+  # '*' matches files in the base directory, '**/*' matches files in subdirectories; both are needed to include everything in dist/
+  files:
+    - '*'
+    - '**/*'
   name: site.zip
